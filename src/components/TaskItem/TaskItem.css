@@ -1,0 +1,28 @@
+.TaskItem{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    padding:15px 10px;
+    border-bottom: 1px solid #eee;
+}
+.TaskItem.active{
+    background: #2ecc71
+}
+.TaskItem input{
+    margin: 0;
+    padding: 0;
+}
+.TaskItem h2{
+    width: 100%;
+    line-height: 30px;
+}
+.TaskItem button{
+    width: 30px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: all .5s ease;
+}
+.TaskItem button:hover{
+    color: #e74c3c;
+}

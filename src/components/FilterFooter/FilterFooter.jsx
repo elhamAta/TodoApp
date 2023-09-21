@@ -1,21 +1,23 @@
 import React from "react";
-
-const FilterFooter = () =>(
-    <div>
-        <div>
-          2 items
+import './FilterFooter.css'
+const FilterFooter = ({tasks}) =>(
+    <div className="FilterFooter">
+        <div className="FilterFooter--countItems">
+          {tasks.length} items
         </div>
-        <ul>
-          <li>
-            <button >All</button>
-          </li>
-          <li>
-            <button >Active</button>
-          </li>
-          <li>
-            <button >Completed</button>
-          </li>
-        </ul>
+        <div className="FilterFooter--filters">
+          <ul>
+            <li>
+              <button className="active"> All </button>
+            </li>
+            <li>
+              <button>Active</button>
+            </li>
+            <li>
+              <button>Completed</button>
+            </li>
+          </ul>
+        </div>
     </div>
 )
 
