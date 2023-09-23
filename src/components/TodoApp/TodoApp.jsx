@@ -13,7 +13,7 @@ const TodoApp = () => {
     const [filter,setFilter] = useState('all');
     const[refresh,setRefresh] = useState(0);
 
-    useEffect(() =>  { //when component loaded run setTask
+    useEffect(() =>  { 
         let storedTask = localStorage.getItem('tasks')
         if(storedTask){
             storedTask = JSON.parse(storedTask)
@@ -37,8 +37,8 @@ const TodoApp = () => {
 
     const addTask = (taskTitle) => {
         const newTasks = [
-            ...tasks,//محتویات task رو قرار میده
-            { //و بعد جیسون جدیدی از اطلاعات setTask میسازه
+            ...tasks,
+            { 
                 id :uuidv4(),
                 title :taskTitle,
                 status : false, //boolean 
