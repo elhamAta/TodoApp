@@ -4,11 +4,16 @@ import {
   TaskItem
 }from '../';
 
-const TaskList = ({tasks,deleteTask}) =>(
+const TaskList = ({tasks,deleteTask,handleChangeStatus}) =>(
     <div className="TaskList">
         <ul>
           {tasks.map((task) => (
-            <TaskItem task={task} deleteTask={deleteTask} /> 
+            <TaskItem 
+              key={`task-${task.id}`} 
+              task={task} 
+              deleteTask={deleteTask} 
+              handleChangeStatus={handleChangeStatus}
+            /> 
           ))}
         </ul>
     </div>

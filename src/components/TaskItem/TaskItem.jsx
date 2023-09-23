@@ -2,9 +2,13 @@ import React from "react";
 import './TaskItem.css';
 import { FaTrashAlt } from "react-icons/fa";
 
-const TaskItem = ({task,deleteTask}) =>(
+const TaskItem = ({task,deleteTask,handleChangeStatus}) =>(
     <li className="TaskItem">
-        <input id="Task" type="checkbox" checked={task.status} />
+        <input
+            onChange={() => handleChangeStatus(task.id)} 
+            checked={task.status}
+            id="Task" type="checkbox"
+        />
         <h2>{task.title}</h2>
         <button onClick={() =>{deleteTask(task.id)}}>
              <FaTrashAlt /> 
